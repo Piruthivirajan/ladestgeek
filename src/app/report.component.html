@@ -1,0 +1,36 @@
+<br/><br/><br/><br/>
+<div class="container">
+<table class="table table-bordered">
+		  <thead>
+			<tr>
+			  <td>S.No</td>
+              <td>Event</td>
+        	  <td>Participate Name1-Departement</td>
+              	  <td>Participate Name2-Departement</td>
+                    
+               <td>Contact1</td>
+        	  <td>Email1</td>
+               <td>Contact1</td>
+        	  <td>Email1</td>
+			  <td width="200" align="center">Action</td>
+			</tr>
+		  </thead>
+		  <tbody>
+			 <tr  *ngFor="let register of registers">
+        <td>{{register.id}}</td> 
+				<td>{{register.event}}</td> 
+				<td>{{register.pname1}}-{{register.dept1}}</td>
+				<td>{{register.contact1}}</td>
+                <td>{{register.email1}}</td>
+                <td>{{register.pname2}}-{{register.dept2}}</td>
+                <td>{{register.contact2}}</td>
+                <td>{{register.email1}}</td>
+      
+				<td width="275"> 
+					
+					<a class="btn btn-danger" (click)="delete(register.id)">Delete</a>
+				</td>
+			 </tr>
+		  </tbody>
+		</table>
+</div>
