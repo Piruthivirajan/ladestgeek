@@ -26,7 +26,10 @@ registers:Event;
        });
     }
 
- deleteEmployee(value:any) {
-
+ delete(value:any) {
+ this.eventservice.removePart(value).subscribe(reg =>{      
+       });
+       this.getDetails();
+       this.router.navigateByUrl('/report');
  }
 }
