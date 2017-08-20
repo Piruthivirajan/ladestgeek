@@ -51,7 +51,6 @@ export class RegisterComponent {
   }
   check(){
    
-    var sd="";
                     if(this.junkc){
                     var junkevent = new Event();
                     junkevent.event="geekjunk"
@@ -67,16 +66,14 @@ export class RegisterComponent {
                     junkevent.email2=this.junkemail2;
                               this.eventservice.addEvent(junkevent)
                               .subscribe(res =>{
-                              sd= res;
+                             
                                });  
                               }
-  alert(sd);
+
 
   }
   changeShape(shape){
   if(shape.value=="Others") {this.other=true;}
-  else {this.other=false;this.newclg="";}
-   
-
+  else {this.other=false;this.newclg=shape.value;}
 }
 }
